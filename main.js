@@ -16,9 +16,17 @@ collapse.addEventListener("click", e => {
 
 const massExtinction = document.querySelector("#destroy-all")
 massExtinction.addEventListener("click", () => {
-    const allGone = document.querySelectorAll("#row img")
-    allGone.forEach(element => {
+    const allGone1 = document.querySelectorAll("#row img")
+    const allGone2 = document.querySelectorAll("ol li")
+    const allGone3 = document.querySelectorAll("ul li")
+    allGone1.forEach(element => {
         element.style.width = "0"
         element.display = "none"
+    })
+    allGone2.forEach(element => {
+        element.style.textDecoration = "line-through"
+    })
+    allGone3.forEach(element => {
+        element.style.opacity = "0"
     })
 })
